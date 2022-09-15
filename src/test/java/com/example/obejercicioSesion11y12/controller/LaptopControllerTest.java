@@ -29,7 +29,7 @@ class LaptopControllerTest {
 
     @BeforeEach
     void setUp() {
-        restTemplateBuilder = new RestTemplateBuilder().rootUri("http://localhost:" + port);
+        restTemplateBuilder = new RestTemplateBuilder().rootUri("http://localhost:" + port).basicAuthentication("admin", "soyadmin");
         testRestTemplate = new TestRestTemplate(restTemplateBuilder);
     }
 
